@@ -1,7 +1,7 @@
 const myTitle = 'A Poem'
 let myObject = {'adjectives': ['foggy', 'radiant', 'boreal','bleak'], 'nouns': ['shadow', 'snow', 'tree', 'blade of darkness'], 
 'verbs': ['glistening','howling','gushing','murmuring','spearing']}
-let myArticleArray = ['The', 'an', 'a','before','within','while','in']
+let myArticleArray = ['The', 'An', 'A','Before','Within','While','In']
 
 // function returnPoem(title, article, noun, adjective) {
 //   return title + ': ' + article + ' ' + adjective + ' ' + noun
@@ -23,7 +23,7 @@ const wholePoem = forLoopPoem(myTitle, myArticleArray, myObject.nouns, myObject.
 typeWriter(wholePoem)
 
 
-//code originally cited from https://www.w3schools.com/howto/howto_js_typewriter.asp, but mine is the improved version
+//code originally cited from https://www.w3schools.com/howto/howto_js_typewriter.asp, but mine is the modified version
 function typeWriter(sentence) {
   let i = -1;
   const speed = 50; /* The speed/duration of the effect in milliseconds */
@@ -39,6 +39,13 @@ function typeWriter(sentence) {
   type();
 }
 
+function changeColor() {
+  document.getElementById("typewriter").style.color = randomColors();
+}
+
+function randomColors() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
 
 
 // while loop poem: this has same effect as for loop
