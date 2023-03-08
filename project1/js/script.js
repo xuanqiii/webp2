@@ -1,25 +1,26 @@
 const myTitle = 'A Poem'
-let myObject = {'adjectives': ['foggy', 'radiant', 'boreal','bleak'], 'nouns': ['shadow', 'snow', 'tree', 'blade of darkness'], 
-'verbs': ['glistening','howling','gushing','murmuring','spearing']}
-let myArticleArray = ['The', 'An', 'A','Before','Within','While','In']
+let myObject = { 'nouns': ['red riding hood', 'cheshire cat', 'blood stained key', 'blue beard','red apple','heel and toe','waxen wings','shining hedge maze','red shoes',
+'dead bride','gingerbread house'], 
+'verbs': ['grinning','running','raging','murmuring','decaying','cut off','melting','dancing','burning']}
+let myArticleArray = ['The']
 
 // function returnPoem(title, article, noun, adjective) {
-//   return title + ': ' + article + ' ' + adjective + ' ' + noun
+//   return title + ': ' + article + ' ' + noun
 // }
 
-// W(returnPoem(myTitle, myArticleArray[0], myObject.adjectives[0],myObject.nouns[0], myObject.verbs[0]))
+// W(returnPoem(myTitle, myArticleArray[0],myObject.nouns[0], myObject.verbs[0]))
 
-function forLoopPoem(title, articles, nouns, adjectives,verbs) {
+function forLoopPoem(title, articles, nouns ,verbs) {
   var wholePoem = ''
   wholePoem += title + '\n'
-  for (i = 0; i < 4; i++) {
-    sentences = getRandomItem(myArticleArray) + ' ' + getRandomItem(myObject.adjectives) + ' ' + getRandomItem(myObject.nouns) + ' ' + getRandomItem(myObject.verbs)
+  for (i = 0; i < 6; i++) {
+    sentences = getRandomItem(myArticleArray) + ' ' + getRandomItem(myObject.nouns) + ' ' + getRandomItem(myObject.verbs)
     wholePoem += sentences + '\n'
   }
   return wholePoem
 }
 
-const wholePoem = forLoopPoem(myTitle, myArticleArray, myObject.nouns, myObject.adjectives, myObject.verbs)
+const wholePoem = forLoopPoem(myTitle, myArticleArray, myObject.nouns, myObject.verbs)
 typeWriter(wholePoem)
 
 
@@ -52,7 +53,7 @@ function randomColors() {
 // let counter = 0
 // W(myTitle)
 // while(counter < 5) {
-//   W(getRandomItem(myArticleArray) + ' ' + getRandomItem(myObject.adjectives) + ' ' + getRandomItem(myObject.nouns) + ' ' + 
+//   W(getRandomItem(myArticleArray) + ' '  + getRandomItem(myObject.nouns) + ' ' + 
 //   getRandomItem(myObject.verbs))
 //   counter++
 // }

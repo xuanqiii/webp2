@@ -1,0 +1,54 @@
+button {
+    border: 0;
+    background: #66665e;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #171710;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 5px 10px;
+    transition: all .1s linear;
+}
+
+button:active {
+    box-shadow: 0 2px 0 #817841;
+    transform: translateY(3px);
+  }
+
+
+/* code credit below: https://techblog.geekyants.com/some-of-the-most-popular-css-text-animations */
+.wrapper {
+    width: auto;
+    margin: 1rem auto;
+}
+
+.wrapper .text {
+    text-align: center;
+    font-size: 6rem;
+    margin: 1rem auto;
+    color: #e5e5e5;
+}
+
+.text span {
+    line-height: 0;
+    animation: disappear 4s 2s both infinite;
+}
+@keyframes disappear {
+    50% {
+        text-shadow: 0 0 40px #cbc7c7;
+    }
+    to {
+        text-shadow: 0 0 20px #cbc7c7;
+        opacity: 0;
+    }
+}
+.sketchholder {
+
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+}
